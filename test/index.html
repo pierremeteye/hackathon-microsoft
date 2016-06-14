@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Circles</title>
+		<script type="text/javascript" src="paper-full.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.29/howler.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<script type="text/paperscript" canvas="myCanvas">
+			
+		var keyData = {
+	q: {
+		sound: new Howl({
+  		urls: ['sounds/octave1do.mp3']
+		}),
+		color: '#1abc9c'
+	},
+	w: {
+		sound: new Howl({
+  		urls: ['sounds/octave1dodiese.mp3']
+		}),
+		color: '#2ecc71'
+	},
+	e: {
+		sound: new Howl({
+  		urls: ['sounds/octave1fa.mp3']
+		}),
+		color: '#3498db'
+	},
+	r: {
+		sound: new Howl({
+  		urls: ['sounds/octave1fadiese.mp3']
+		}),
+		color: '#9b59b6'
+	},
+		t: {
+		sound: new Howl({
+  		urls: ['sounds/octave1la.mp3']
+		}),
+		color: '#34495e'
+	},
+	y: {
+		sound: new Howl({
+  		urls: ['sounds/octave1ladiese.mp3']
+		}),
+		color: '#16a085'
+	},
+	u: {
+		sound: new Howl({
+  		urls: ['sounds/octave1mi.mp3']
+		}),
+		color: '#27ae60'
+	},
+	i: {
+		sound: new Howl({
+  		urls: ['sounds/octave1midiese.mp3']
+		}),
+		color: '#2980b9'
+	},
+	o: {
+		sound: new Howl({
+			urls: ['sounds/octave1re.mp3']
+		}),
+		color: '#8e44ad'
+	},
+	p: {
+		sound: new Howl({
+  		urls: ['sounds/octave1rediese.mp3']
+		}),
+		color: '#2c3e50'
+	},
+	a: {
+		sound: new Howl({
+  		urls: ['sounds/octave1si.mp3']
+		}),
+		color: '#f1c40f'
+	},
+	s: {
+		sound: new Howl({
+  		urls: ['sounds/octave1sol.mp3']
+		}),
+		color: '#e67e22'
+	},
+		d: {
+		sound: new Howl({
+  		urls: ['sounds/octave1soldiese.mp3']
+		}),
+		color: '#e74c3c'
+	},
+
+	a: {
+		sound: new Howl({
+  		urls: ['sounds/octave2do.mp3']
+		}),
+		color: '#1abc9c'
+	},
+	s: {
+		sound: new Howl({
+  		urls: ['sounds/octave2dodiese.mp3']
+		}),
+		color: '#2ecc71'
+	},
+	d: {
+		sound: new Howl({
+  		urls: ['sounds/octave2fa.mp3']
+		}),
+		color: '#3498db'
+	},
+	f: {
+		sound: new Howl({
+  		urls: ['sounds/octave2fadiese.mp3']
+		}),
+		color: '#9b59b6'
+	},
+		g: {
+		sound: new Howl({
+  		urls: ['sounds/octave2la.mp3']
+		}),
+		color: '#34495e'
+	},
+	h: {
+		sound: new Howl({
+  		urls: ['sounds/octave2ladiese.mp3']
+		}),
+		color: '#16a085'
+	},
+	j: {
+		sound: new Howl({
+  		urls: ['sounds/octave2mi.mp3']
+		}),
+		color: '#27ae60'
+	},
+	k: {
+		sound: new Howl({
+  		urls: ['sounds/octave2midiese.mp3']
+		}),
+		color: '#2980b9'
+	},
+	l: {
+		sound: new Howl({
+			urls: ['sounds/octave2re.mp3']
+		}),
+		color: '#8e44ad'
+	},
+	z: {
+		sound: new Howl({
+  		urls: ['sounds/octave2rediese.mp3']
+		}),
+		color: '#2c3e50'
+	},
+	x: {
+		sound: new Howl({
+  		urls: ['sounds/octave2si.mp3']
+		}),
+		color: '#f1c40f'
+	},
+	c: {
+		sound: new Howl({
+  		urls: ['sounds/octave2sol.mp3']
+		}),
+		color: '#e67e22'
+	},
+		f: {
+		sound: new Howl({
+  		urls: ['sounds/octave2soldiese.mp3']
+		}),
+		color: '#e74c3c'
+	},
+	
+}
+
+		var circles = [];
+
+			
+		function onKeyDown(event) {
+
+			if (keyData[event.key]) {
+				var maxPoint = new Point(view.size.width, view.size.height);
+				var randomPoint = Point.random();
+				var point = maxPoint * randomPoint;
+				var newCircle = new Path.Circle(point, 500)
+				newCircle.fillColor = keyData[event.key].color;
+				keyData[event.key].sound.play();
+				circles.push(newCircle);
+			}
+
+			
+
+			// if (event.key === "a") {
+			// 	sound1.play();
+			// 	newCircle.fillColor = "blue";
+			// }
+
+			// else if (event.key === "s") {
+			// 	sound2.play();
+			// 	newCircle.fillColor = "red";
+			// }
+			// else {
+			// 	newCircle.fillColor = "orange";
+			// }
+
+
+		}
+
+
+		function onFrame(event){
+			for(var i = 0; i < circles.length; i++){
+				circles[i].fillColor.hue += 1;
+				circles[i].scale(.9);
+			}
+		}
+
+		// var circles = [];
+
+		// function onKeyDown(event) {
+			
+		// 		var maxPoint = new Point(view.size.width, view.size.height);
+		// 		var randomPoint = Point.random();
+		// 		var point = maxPoint * randomPoint;
+		// 		var newCircle = new Path.Circle(point, 500)
+		// 		newCircle.fillColor = "orange";
+		// 		circles.push(newCircle);			
+		// }
+
+		// function onFrame(event){
+		// 	for(var i = 0; i < circles.length; i++){
+		// 		circles[i].fillColor.hue += 1;
+		// 		circles[i].scale(.9);
+		// 	}
+		// }
+
+			
+		</script>
+	</head>
+
+	<body>
+		<img src="img/lol.jpeg">
+		<script type="text/javascript" src="js/js.js"></script>
+		<canvas id="myCanvas" resize></canvas>
+	</body>
+</html>
