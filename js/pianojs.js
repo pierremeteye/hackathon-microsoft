@@ -27,8 +27,8 @@ $("#reset").click(function(){
 
 // Notes
 
-var audiodo = $(".mysoundclip")[1];
-$("#do").click(function() {
+var audiodo = $(".mysoundclip")[0];
+$(".do").click(function() {
 
 	if (audiodo === son) {
 		audiodo.play();
@@ -39,11 +39,11 @@ $("#do").click(function() {
 		audiodo.play();
 		console.log("bad"); fail.textContent = score1++;
 	}
-    
+	
 })
 
-var audiododiese = $(".mysoundclip")[2];
-$("#dodiese").click(function() {
+var audiododiese = $(".mysoundclip")[1];
+$(".dodiese").click(function() {
 	if (audiododiese === son) {
 		audiododiese.play();
 		console.log("Good"); good.textContent = score++;
@@ -54,8 +54,8 @@ $("#dodiese").click(function() {
 	}
 })
 
-var audiore = $(".mysoundclip")[3];
-$("#re").click(function() {
+var audiore = $(".mysoundclip")[2];
+$(".re").click(function() {
 
 	if (audiore === son) {
     	audiore.play();
@@ -67,8 +67,8 @@ $("#re").click(function() {
 	}
 })
 
-var audiorediese = $(".mysoundclip")[4];
-$("#rediese").click(function() {
+var audiorediese = $(".mysoundclip")[3];
+$(".rediese").click(function() {
 	if (audiorediese === son) {
     audiorediese.play();
 		console.log("Good"); good.textContent = score++;
@@ -79,8 +79,8 @@ $("#rediese").click(function() {
 	}
 })
 
-var audiomi = $(".mysoundclip")[5];
-$("#mi").click(function() {
+var audiomi = $(".mysoundclip")[4];
+$(".mi").click(function() {
 	if (audiomi === son) {
     audiomi.play();
 		console.log("Good"); good.textContent = score++;
@@ -91,8 +91,8 @@ $("#mi").click(function() {
 	}
 })
 
-var audiofa = $(".mysoundclip")[6];
-$("#fa").click(function() {
+var audiofa = $(".mysoundclip")[5];
+$(".fa").click(function() {
 	if (audiofa === son) {
     audiofa.play();
 		console.log("Good"); good.textContent = score++;
@@ -103,8 +103,8 @@ $("#fa").click(function() {
 	}
 })
 
-var audiofadiese = $(".mysoundclip")[7];
-$("#fadiese").click(function() {
+var audiofadiese = $(".mysoundclip")[6];
+$(".fadiese").click(function() {
 	if (audiofadiese === son) {
     audiofadiese.play();
 		console.log("Good"); good.textContent = score++;
@@ -115,8 +115,8 @@ $("#fadiese").click(function() {
 	}
 })
 
-var audiosol = $(".mysoundclip")[8];
-$("#sol").click(function() {
+var audiosol = $(".mysoundclip")[7];
+$(".sol").click(function() {
 	if (audiosol === son) {
     audiosol.play();
 		console.log("Good"); good.textContent = score++;
@@ -127,8 +127,8 @@ $("#sol").click(function() {
 	}
 })
 
-var audiosoldiese = $(".mysoundclip")[9];
-$("#soldiese").click(function() {
+var audiosoldiese = $(".mysoundclip")[8];
+$(".soldiese").click(function() {
     if (audiosoldiese === son) {
     audiosoldiese.play();
 		console.log("Good"); good.textContent = score++;
@@ -139,8 +139,8 @@ $("#soldiese").click(function() {
 	}
 })
 
-var audiola = $(".mysoundclip")[10];
-$("#la").click(function() {
+var audiola = $(".mysoundclip")[9];
+$(".la").click(function() {
      if (audiola === son) {
     audiola.play();
 		console.log("Good"); good.textContent = score++;
@@ -151,8 +151,8 @@ $("#la").click(function() {
 	}
 })
 
-var audioladiese = $(".mysoundclip")[11];
-$("#ladiese").click(function() {
+var audioladiese = $(".mysoundclip")[10];
+$(".ladiese").click(function() {
     if (audioladiese === son) {
     audioladiese.play();
 		console.log("Good"); good.textContent = score++;
@@ -163,8 +163,8 @@ $("#ladiese").click(function() {
 	}
 })
 
-var audiosi = $(".mysoundclip")[12];
-$("#si").click(function() {
+var audiosi = $(".mysoundclip")[11];
+$(".si").click(function() {
       if (audiosi === son) {
     audiosi.play();
 		console.log("Good"); good.textContent = score++;
@@ -178,8 +178,8 @@ $("#si").click(function() {
 
 //Deuxième octave
 
-var audiodo2 = $(".mysoundclip")[13];
-$("#do2").click(function() {
+var audiodo2 = $(".mysoundclip")[12];
+$(".dofinal").click(function() {
       if (audiodo2 === son) {
     audiodo2.play();
 		console.log("Good"); good.textContent = score++;
@@ -191,7 +191,7 @@ $("#do2").click(function() {
 
 })
 
-var audiododiese2 = $(".mysoundclip")[14];
+var audiododiese2 = $(".mysoundclip")[1];
 $("#dodiese2").click(function() {
 	if (audiododiese2 === son) {
 		audiododiese2.play();
