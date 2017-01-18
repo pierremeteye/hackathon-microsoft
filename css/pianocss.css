@@ -16,6 +16,10 @@
 	margin-right: 10px;
 }*/
 
+.test:hover {
+	 fill: red !important;
+}
+
 .octave{
 	border: solid 2px black;
 	width: 1000px;
