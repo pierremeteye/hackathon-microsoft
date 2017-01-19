@@ -16,6 +16,9 @@
 	margin-right: 10px;
 }*/
 
+svg {
+	    width: 64%;
+}
 .test:hover {
 	 fill: red !important;
 }
