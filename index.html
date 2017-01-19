@@ -4,155 +4,117 @@
 	<title>Piano</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/pianocss.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
 </head>
 <body>
 
 <div id="piano">
 
 
+	<div id="text">
+		<h1>Happy Birthday Bro</h1>
 
+		<p>How to play "Happy Birthday" ?</p>
+		<button>Cheat</button>
+	</div>
+	
+	
 
-<!-- Son aléatoire -->
-
-<button id="button">Play sound</button>
-
-<!-- Bouton reset -->
-
-<button id="reset">Play again</button>
-
-<!-- Première octave -->
-
-<p>Good : <span id="good">0</span></p>
-<p>Fail : <span id="fail">0</span></p>
-
-<svg width="100%" viewBox="0 0 1120 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<title>Piano Keyboard</title>
-	<defs></defs>
-		<g id="piano-keyboard">
-			<g id="octave-1">
-				<rect id="octave-1-C-key" class="test do" data-piano-key="C" stroke="#555555" fill="#FFFFF7" x="0" y="0" width="80" height="400"></rect>
-				<rect id="octave-1-D-key" class="test re" data-piano-key="D" stroke="#555555" fill="#FFFFF7" x="80" y="0" width="80" height="400"></rect>
-				<rect id="octave-1-E-key" class="test mi" data-piano-key="E" stroke="#555555" fill="#FFFFF7" x="160" y="0" width="80" height="400"></rect>
-				<rect id="octave-1-F-key" class="test fa" data-piano-key="F" stroke="#555555" fill="#FFFFF7" x="240" y="0" width="80" height="400"></rect>
-				<rect id="octave-1-G-key" class="test sol" data-piano-key="G" stroke="#555555" fill="#FFFFF7" x="320" y="0" width="80" height="400"></rect>
-				<rect id="octave-1-A-key" class="test la" data-piano-key="A" stroke="#555555" fill="#FFFFF7" x="400" y="0" width="80" height="400"></rect>
-				<rect id="octave-1-B-key" class="test si" data-piano-key="B" stroke="#555555" fill="#FFFFF7" x="480" y="0" width="80" height="400"></rect>
-				<rect id="octave-1-C#-key" class="test dodiese" data-piano-key="C#" stroke="#979797" fill="#4B4B4B" x="60" y="0" width="40" height="280"></rect>
-				<rect id="octave-1-D#-key" class="test rediese" data-piano-key="D#" stroke="#979797" fill="#4B4B4B" x="140" y="0" width="40" height="280"></rect>
-				<rect id="octave-1-F#-key" class="test fadiese" data-piano-key="F#" stroke="#979797" fill="#4B4B4B" x="300" y="0" width="40" height="280"></rect>
-				<rect id="octave-1-G#-key" class="test soldiese" data-piano-key="G#" stroke="#979797" fill="#4B4B4B" x="380" y="0" width="40" height="280"></rect>
-				<rect id="octave-1-A#-key" class="test ladiese" data-piano-key="A#" stroke="#979797" fill="#4B4B4B" x="460" y="0" width="40" height="280"></rect>
+	<svg viewBox="0 0 700 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<g id="piano-keyboard">
+				<g id="octave-1">
+					<rect id="octave-1-C-key" class="test do" data-piano-key="C" stroke="#555555" fill="#FFFFF7" x="0" y="0" width="80" height="400"></rect>
+					<rect id="octave-1-D-key" class="test re" data-piano-key="D" stroke="#555555" fill="#FFFFF7" x="80" y="0" width="80" height="400"></rect>
+					<rect id="octave-1-E-key" class="test mi" data-piano-key="E" stroke="#555555" fill="#FFFFF7" x="160" y="0" width="80" height="400"></rect>
+					<rect id="octave-1-F-key" class="test fa" data-piano-key="F" stroke="#555555" fill="#FFFFF7" x="240" y="0" width="80" height="400"></rect>
+					<rect id="octave-1-G-key" class="test sol" data-piano-key="G" stroke="#555555" fill="#FFFFF7" x="320" y="0" width="80" height="400"></rect>
+					<rect id="octave-1-A-key" class="test la" data-piano-key="A" stroke="#555555" fill="#FFFFF7" x="400" y="0" width="80" height="400"></rect>
+					<rect id="octave-1-B-key" class="test si" data-piano-key="B" stroke="#555555" fill="#FFFFF7" x="480" y="0" width="80" height="400"></rect>
+					<rect id="octave-1-C#-key" class="test dodiese" data-piano-key="C#" stroke="#979797" fill="#4B4B4B" x="60" y="0" width="40" height="280"></rect>
+					<rect id="octave-1-D#-key" class="test rediese" data-piano-key="D#" stroke="#979797" fill="#4B4B4B" x="140" y="0" width="40" height="280"></rect>
+					<rect id="octave-1-F#-key" class="test fadiese" data-piano-key="F#" stroke="#979797" fill="#4B4B4B" x="300" y="0" width="40" height="280"></rect>
+					<rect id="octave-1-G#-key" class="test soldiese" data-piano-key="G#" stroke="#979797" fill="#4B4B4B" x="380" y="0" width="40" height="280"></rect>
+					<rect id="octave-1-A#-key" class="test ladiese" data-piano-key="A#" stroke="#979797" fill="#4B4B4B" x="460" y="0" width="40" height="280"></rect>
+				</g>
+				<g id="octave-2" transform="translate(560.000000, 0.000000)">
+					<rect id="octave-2-C-key" class="test dofinal" data-piano-key="C" stroke="#555555" fill="#FFFFF7" x="0" y="0" width="80" height="400"></rect>
+					
+				</g>
 			</g>
-			<g id="octave-2" transform="translate(560.000000, 0.000000)">
-				<rect id="octave-2-C-key" class="test dofinal" data-piano-key="C" stroke="#555555" fill="#FFFFF7" x="0" y="0" width="80" height="400"></rect>
-				
-			</g>
-		</g>
-</svg>
-<!-- Do et Dodiese -->
-	<div class="octave">
-		<div id="blanche">
-			<div id="do">Do</div>
+	</svg>
+
+</div>
+
 				<audio class="mysoundclip" preload="auto">
 				    <source src="sounds/do.m4a"></source>
 				</audio>
-		</div>
-
-		<div id="noire">
-			<div id="dodiese">Dodiese</div>
+		
 			<audio class="mysoundclip" preload="auto">
 				<source src="sounds/dodiese.m4a"></source>
 			</audio>
-		</div>
+		
 
-	<!-- Ré et Rédiese -->
 
-		<div id="blanche">
-			<div id="re">Ré</div>
 			<audio class="mysoundclip" preload="auto">
 			    <source src="sounds/ré.m4a"></source>
 			</audio>
-		</div>
 
-		<div id="noire">
-			<div id="rediese">Rédiese</div>
 			<audio class="mysoundclip" preload="auto">
 			    <source src="sounds/rediese.m4a"></source>
 			</audio>
-		</div>
+		
 
-	<!-- Mi -->
 
-		<div id="blanche">
-			<div id="mi">Mi</div>
 			<audio class="mysoundclip" preload="auto">
 			    <source src="sounds/mi.m4a"></source>
 			</audio>
-		</div>
+		
 
-	<!-- Fa et Fadiese -->
 
-		<div id="blanche">
-			<div id="fa">Fa</div>
 			<audio class="mysoundclip" preload="auto">
 			    <source src="sounds/fa.m4a"></source>
 			</audio>
-		</div>
+		
 
-		<div id="noire">
-			<div id="fadiese">Fadiese</div>
 			<audio class="mysoundclip" preload="auto">
 			    <source src="sounds/fadiese.m4a"></source>
 			</audio>
-		</div>
+		
 
-	<!-- Sol et Soldiese -->
 
-		<div id="blanche">
-			<div id="sol">Sol</div>
 			<audio class="mysoundclip" preload="auto">
 			    <source src="sounds/sol.m4a"></source>
 			</audio>
-		</div>
 
-		<div id="noire">
-			<div id="soldiese">Soldiese</div>
 			<audio class="mysoundclip" preload="auto">
 			    <source src="sounds/soldiese.m4a"></source>
 			</audio>
-		</div>
+		
 
-	<!-- La et Ladiese -->
 
-		<div id="blanche">
-			<div id="la">La</div>
 			<audio class="mysoundclip" preload="auto">
 			    <source src="sounds/la.m4a"></source>
 			</audio>
-		</div>
+		
 
-		<div id="noire">
-			<div id="ladiese">Ladiese</div>
+
 			<audio class="mysoundclip" preload="auto">
 			    <source src="sounds/ladiese.m4a"></source>
 			</audio>
-		</div>
+		
 
-	<!-- Si -->
 
-		<div id="blanche">
-			<div id="si">Si</div>
 			<audio class="mysoundclip" preload="auto">
 			    <source src="sounds/si.m4a"></source>
 			</audio>
-		</div>
+		
 
-		<div id="blanche">
-			<div id="dofinal">Dofinal</div>
+		
 			<audio class="mysoundclip" preload="auto">
 			    <source src="sounds/dofinal.m4a"></source>
 			</audio>
-		</div>
+		
 
 	</div>
 
